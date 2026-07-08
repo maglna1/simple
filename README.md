@@ -16,7 +16,19 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
+> ⚠️ **常见坑**：PyCharm 会自动创建并使用项目自己的 `.venv/`。在 PyCharm 的 Terminal 里直接 `pip install` 会装到 `.venv`，没问题；但在系统 cmd / 另一个终端里跑 `pip install` 会装到**全局 Python**，PyCharm 仍然找不到。
+>
+> 如果你看到 `ModuleNotFoundError: No module named 'dotenv'`，多半就是这个原因。修法：
+> ```bash
+> # Windows
+> .venv\Scripts\python.exe -m pip install -r requirements.txt
+> # macOS / Linux
+> .venv/bin/python -m pip install -r requirements.txt
+> ```
+
 ### 2. 安装依赖
+
+**确保在虚拟环境激活状态下**（或在 `.venv` 路径下显式调用 `python -m pip`）：
 
 ```bash
 pip install -r requirements.txt
