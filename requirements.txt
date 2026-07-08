@@ -1,0 +1,28 @@
+# LangChain 学习合集依赖
+# 锁定 LangChain 0.3 主版本；1.0 发布后再单独跟进（import 路径有过 breaking change）
+
+# 基础
+python-dotenv>=1.0
+pydantic>=2.7
+
+# LangChain 核心与 OpenAI 兼容集成
+langchain>=0.3,<1.0
+langchain-openai>=0.2
+
+# RAG 与向量库（examples/06, 07 使用）
+langchain-chroma>=0.1
+chromadb>=0.5
+
+# HuggingFace 本地 embedding（examples/06, 07 使用；首次运行会下载模型）
+langchain-huggingface>=0.1
+sentence-transformers>=3.0
+
+# 文档加载与切分（examples/06, 07 使用）
+langchain-community>=0.3
+pypdf>=5.0  # 若需要加载 PDF 文档
+
+# LangGraph（examples/09 使用）
+langgraph>=0.2
+
+# Agent（examples/08 使用；新版 langchain 已将 create_react_agent 移到 langgraph）
+# 已在 langgraph 中，无需额外依赖

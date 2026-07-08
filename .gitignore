@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 环境变量与凭据 —— 绝不能提交真实 key
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 测试与缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Chroma 向量库持久化目录（examples/07）
+examples/*/chroma/
+examples/*/chroma.db/
+examples/*/.chroma/
+
+# Embedding 模型缓存（examples/06/07 首次运行会下载）
+examples/*/.cache/
+models_cache/
+
+# 日志与临时文件
+*.log
+*.tmp
+.DS_Store
